@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'teste1';
+  name:string = "";
+  setValue() {
+    this.name = 'kkkk';
+  }
+
+  onSubmit(f: NgForm){
+    console.log(f.value);
+    console.log(f.valid);
+  }
+
+  public name1 = "Vishwas";
+  public message = "";
 }
